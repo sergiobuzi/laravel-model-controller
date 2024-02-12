@@ -2,7 +2,5 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-
-    return view('pages.index');
-});
+use App\Http\Controllers\Guest\PageController;
+Route::get('/', [PageController::class, 'index']);
